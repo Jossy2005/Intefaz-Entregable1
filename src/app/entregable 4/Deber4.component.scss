@@ -1,0 +1,122 @@
+.wrapper {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .back-link {
+    text-decoration: none;
+  }
+
+  .back-button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #004d40;
+    }
+  }
+
+  .form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .form-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      .form-group {
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+
+        &:nth-child(2) {
+          margin-left: 10px;
+        }
+
+        &.full-width {
+          width: 100%;
+        }
+
+        label {
+          font-size: 14px;
+          color: #555;
+        }
+
+        input,
+        textarea,
+        select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 14px;
+          color: #333;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: #00796b;
+            outline: none;
+          }
+        }
+
+        textarea {
+          resize: vertical;
+          height: 80px;
+        }
+
+        .form-checkbox {
+          margin-right: 10px;
+        }
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+
+        label {
+          font-size: 14px;
+          color: #555;
+        }
+      }
+
+      .submit-group {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        button {
+          background-color: #00796b;
+          color: white;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #004d40;
+          }
+        }
+      }
+    }
+  }
+}

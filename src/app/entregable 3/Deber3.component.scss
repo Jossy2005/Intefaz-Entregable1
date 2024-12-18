@@ -1,0 +1,88 @@
+$button-color: #D2B48C; // Café claro
+$header-color: #76448a;
+$subheader-color: #f4d03f;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-back {
+  background-color: $button-color;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($button-color, 10%);
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.p-card {
+  width: 300px;
+  background-color: transparent;
+  color: $header-color;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .p-card-header {
+    text-align: center;
+    img {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
+
+  .p-card-content {
+    padding: 20px;
+    p {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  .p-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 80px;
+
+    .p-button {
+      background-color: $button-color;
+      color: #fff;
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.2s;
+
+      &:hover {
+        background-color: darken($button-color, 10%);
+        transform: scale(1.05);
+      }
+    }
+  }
+}

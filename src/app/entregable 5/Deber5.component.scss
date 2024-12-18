@@ -1,0 +1,93 @@
+/* Variables para colores y transiciones */
+$color-white: #ffffff;
+$color-transparent: transparent;
+$color-bg-dark: #333;
+$color-bg-light: #f4d03f;
+$transition-shadow: 0.3s ease-in-out;
+
+.product-item {
+  padding: 1rem;
+  background-color: $color-transparent;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: box-shadow $transition-shadow;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .product-detail {
+    text-align: center;
+    color: $color-white;
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .p-tag {
+      margin-bottom: 1rem;
+      background-color: $color-transparent;
+      color: $color-white;
+      border: none;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .p-button {
+        border-radius: 50%;
+        border: 1px solid $color-white;
+        color: $color-white;
+        transition: all 0.2s ease;
+
+        &.p-button-outlined {
+          border-color: $color-white;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+/* Botón Volver con emoji */
+a button {
+  background-color: #e74c3c;
+  color: $color-white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c0392b;
+  }
+}
+
+/* Ajustes del carrusel */
+.transparent-carousel {
+  background-color: $color-bg-dark;
+  padding: 2rem 0;
+
+  .p-carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-item {
+    margin: 0 1rem;
+  }
+}
