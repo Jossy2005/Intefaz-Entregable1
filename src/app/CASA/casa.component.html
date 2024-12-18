@@ -1,5 +1,6 @@
 <div class="cuadro">
   <h1>Bienvenido</h1>
+  <p>Explora los diferentes deberes y selecciona el que desees realizar.</p>
   <div class="button-container" *ngIf="showButtons">
     <button routerLink="/Deber1">
       <i class="pi pi-book"></i> Deber 1
@@ -19,4 +20,8 @@
   </div>
 
   <router-outlet></router-outlet>
+
+  <div class="image-container">
+    <img src="https://cdn.shopify.com/s/files/1/0468/5460/2913/files/no-compres-adopta.jpg?v=1605174526" alt="Imagen representativa">
+  </div>
 </div>

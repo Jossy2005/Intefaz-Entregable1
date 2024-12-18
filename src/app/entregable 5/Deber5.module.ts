@@ -7,6 +7,7 @@ import { TagModule } from 'primeng/tag';              // Importar PrimeNG Tag
 import { ButtonModule } from 'primeng/button';        // Importar PrimeNG Button
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   declarations: [Deber5Component],  // Declaras tu componente aquí
   imports: [

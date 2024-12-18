@@ -1,16 +1,12 @@
-/* Variables para colores y transiciones */
-$color-white: #ffffff;
-$color-transparent: transparent;
-$color-bg-dark: #333;
-$color-bg-light: #f4d03f;
-$transition-shadow: 0.3s ease-in-out;
+/* Estilos para el componente de Angular y PrimeNG */
 
-.product-item {
+/* Estilos para el carrusel */
+.transparent-carousel .product-item {
+  background-color: transparent;
   padding: 1rem;
-  background-color: $color-transparent;
   border-radius: 0.5rem;
   box-shadow: none;
-  transition: box-shadow $transition-shadow;
+  transition: box-shadow 0.3s;
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -18,76 +14,48 @@ $transition-shadow: 0.3s ease-in-out;
 
   .product-detail {
     text-align: center;
-    color: $color-white;
+    color: white;
 
     h4 {
-      font-size: 1.25rem;
-      font-weight: bold;
+      font-size: 1.5rem;
       margin-bottom: 0.5rem;
     }
 
-    p {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
     .p-tag {
-      margin-bottom: 1rem;
-      background-color: $color-transparent;
-      color: $color-white;
-      border: none;
-    }
-
-    .flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .p-button {
-        border-radius: 50%;
-        border: 1px solid $color-white;
-        color: $color-white;
-        transition: all 0.2s ease;
-
-        &.p-button-outlined {
-          border-color: $color-white;
-        }
-
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
+      background-color: transparent;
+      border-color: transparent;
+      color: white;
     }
   }
 }
 
-/* Botón Volver con emoji */
-a button {
-  background-color: #e74c3c;
-  color: $color-white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Estilos para la galería de imágenes */
+.transparent-gallery .gallery-item {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: box-shadow 0.3s;
 
   &:hover {
-    background-color: #c0392b;
-  }
-}
-
-/* Ajustes del carrusel */
-.transparent-carousel {
-  background-color: $color-bg-dark;
-  padding: 2rem 0;
-
-  .p-carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
-  .product-item {
-    margin: 0 1rem;
+  .p-galleria .p-gallery-content {
+    position: relative;
+
+    .p-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+
+      .p-button-icon {
+        font-size: 1.5rem;
+      }
+    }
   }
 }

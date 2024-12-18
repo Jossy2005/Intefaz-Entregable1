@@ -1,13 +1,155 @@
-button {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #007bff00, #0057b300);
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+// Variables de colores
+$primary: #3498db;
+$secondary: #2ecc71;
+$yellow: #f1c40f;
+$teal: #1abc9c;
+$orange: #e67e22;
+$gray: #95a5a6;
+$purple: #8e44ad;
+$background: linear-gradient(135deg, #f3f4f6, #e3e4e6);
+
+// Estilos globales
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: $background;
+  color: #333;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+.back-button {
+  background-color: $primary;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary, 10%);
   }
+}
+
+// Contenedor principal
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+// Bloques alineados
+.centered-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+  height: 120px;
+  background: $primary;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.side-blocks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 720px;
+  gap: 1rem;
+
+  .block {
+    flex: 1;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 8px;
+
+    &.yellow {
+      background: $yellow;
+    }
+
+    &.green {
+      background: $secondary;
+    }
+
+    &.orange {
+      background: $orange;
+    }
+
+    &.gray {
+      background: $gray;
+    }
+  }
+}
+
+// Grid bloques
+.grid-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 960px;
+
+  .block {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: $teal;
+    border-radius: 8px;
+  }
+}
+
+// Alineado a la derecha
+.aligned-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 720px;
+  height: 120px;
+  background: $purple;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+// Responsivo
+@media (max-width: 768px) {
+  .side-blocks {
+    flex-direction: column;
+  }
+
+  .aligned-right {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .block {
+    font-size: 0.8rem;
+  }
+}

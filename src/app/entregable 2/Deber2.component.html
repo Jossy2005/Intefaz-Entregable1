@@ -1,44 +1,56 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design</title>
+</head>
+<body>
+  <header>
+    <a href="casa.component.html">
+      <button class="back-button">Volver</button>
+    </a>
+  </header>
 
-<a href="casa.component.html">
-    <button> Volver</button>
-</a>
+  <main class="container">
+    <!-- Bloque alineado en la mitad -->
+    <div class="centered-block">
+      Responsivo
+    </div>
 
-<!-- Bloque alineado en la mitad -->
-<div class="flex align-items-center justify-content-center">
-    <div class="block w-20rem h-10rem bg-blue-200 text-black font-bold flex align-items-center justify-content-center p-4 border-round">Responsivo</div>
-</div>
+    <!-- Bloques alineados a los lados -->
+    <div class="side-blocks">
+      <div class="block yellow">Hola</div>
+      <div class="block green">Adiós</div>
+    </div>
 
-<!-- Bloques alineados a los lados -->
-<div class="flex justify-content-between w-full mt-4">
-    <div class="block w-20rem h-10rem bg-yellow-200 text-black font-bold flex align-items-center justify-content-center p-4 border-round">Hola</div>
-    <div class="block w-20rem h-10rem bg-green-200 text-black font-bold flex align-items-center justify-content-center p-4 border-round">Adiós</div>
-</div>
+    <!-- Fila de 8 bloques en el centro -->
+    <div class="grid-blocks">
+      <div class="block teal">Mapa</div>
+      <div class="block teal">Auto</div>
+      <div class="block teal">Sandía</div>
+      <div class="block teal">Olla</div>
+      <div class="block teal">Tarea</div>
+      <div class="block teal">9</div>
+      <div class="block teal">Diseño</div>
+      <div class="block teal">Frontend</div>
+    </div>
 
-<!-- Fila de 8 bloques en el centro -->
-<div class="flex flex-wrap justify-content-center w-full mt-4 gap-5">
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">Mapa</div>
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">Auto</div>
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">Sandía</div>
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">Olla</div>
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">Tarea</div>
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">9</div>
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">Diseño</div>
-    <div class="block w-10rem h-10rem bg-teal-200 text-black font-bold flex align-items-center justify-center p-7 border-round mb-3 lg:w-8.5rem md:w-8rem sm:w-6rem">Frontend</div>
-</div>
+    <!-- Bloque alineado a la derecha -->
+    <div class="aligned-right">
+      Jarrón
+    </div>
 
-<!-- Bloque alineado a la derecha -->
-<div class="flex justify-content-end w-full mt-4">
-    <div class="block w-30rem h-10rem bg-blue-400 text-black font-bold flex align-items-center justify-content-center p-4 border-round">Jarrón</div>
-</div>
+    <!-- Dos bloques más a los lados -->
+    <div class="side-blocks">
+      <div class="block orange">Hamburguesa</div>
+      <div class="block gray">Pitaya</div>
+    </div>
 
-<!-- Dos bloques más a los lados -->
-<div class="flex justify-content-between w-full mt-4">
-    <div class="block w-11rem h-10rem bg-orange-300 text-black font-bold flex align-items-center justify-content-center p-4 border-round">Hamburguesa</div>
-    <div class="block w-11rem h-10rem bg-gray-400 text-black font-bold flex align-items-center justify-content-center p-4 border-round">Pitaya</div>
-</div>
-
-<!-- Bloque al final en la mitad -->
-<div class="flex align-items-center justify-content-center mt-4">
-    <div class="block w-20rem h-10rem bg-red-300 text-black font-bold flex align-items-center justify-content-center p-4 border-round">Fin</div>
-</div>
+    <!-- Bloque al final en la mitad -->
+    <div class="centered-block">
+      Fin
+    </div>
+  </main>
+</body>
+</html>

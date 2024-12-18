@@ -1,9 +1,18 @@
+// Colores reutilizables
 $button-color: #D2B48C; // Café claro
-$header-color: #76448a;
-$subheader-color: #f4d03f;
+$header-color: #76448a; // Morado oscuro
+$subheader-color: #f4d03f; // Amarillo brillante
+$text-color: #333; // Gris oscuro para texto
+$border-color: #eaeaea; // Gris claro para bordes
+$hover-scale: 1.05;
 
+// Estilos globales
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #fef9e7, #f4f6f7); // Fondo suave
+  color: $text-color;
+  padding: 20px;
 }
 
 a {
@@ -13,14 +22,18 @@ a {
 .button-back {
   background-color: $button-color;
   color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  padding: 14px 28px; // Incrementado el padding para mayor impacto visual
   font-size: 16px;
-  transition: background-color 0.3s;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px; // Radio de borde más pronunciado
+  transition: all 0.3s;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); // Sombras más sutiles para un efecto de elevación
 
   &:hover {
-    background-color: darken($button-color, 10%);
+    background-color: darken($button-color, 12%); // Incrementado el porcentaje de oscurecimiento
+    transform: scale($hover-scale);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); // Mayor sombra al pasar el cursor
   }
 }
 
@@ -28,35 +41,52 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
+  padding: 20px;
 }
 
 .p-card {
-  width: 300px;
-  background-color: transparent;
-  color: $header-color;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
+  width: 280px;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale($hover-scale);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); // Incremento en la sombra para un efecto más marcado
   }
 
   .p-card-header {
-    text-align: center;
+    position: relative;
+
     img {
       width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      height: auto;
+    }
+
+    .card-title {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: bold;
     }
   }
 
   .p-card-content {
     padding: 20px;
+
     p {
-      color: rgb(0, 0, 0);
+      margin: 0 0 10px;
+      color: $text-color;
+      line-height: 1.6;
     }
   }
 
@@ -64,25 +94,51 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    height: 80px;
+    padding: 10px 20px;
 
     .p-button {
       background-color: $button-color;
       color: #fff;
-      width: 100%;
-      padding: 15px;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
+      padding: 12px 20px;
       border: none;
-      border-radius: 10px;
+      border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s, transform 0.2s;
+      transition: all 0.3s;
 
       &:hover {
-        background-color: darken($button-color, 10%);
-        transform: scale(1.05);
+        background-color: darken($button-color, 12%);
+        transform: scale($hover-scale);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); // Ajuste de la sombra en el hover
       }
     }
+  }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+  .card-container {
+    gap: 20px;
+  }
+
+  .p-card {
+    width: 90%;
+  }
+
+  .button-back {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-back {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .p-card {
+    width: 100%;
   }
 }

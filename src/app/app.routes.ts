@@ -17,12 +17,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 
+
+
 export const routes: Routes = [
   { path: 'Deber1', component: Deber1Component},
   { path: 'Deber2', component: Deber2Component },
   { path: 'Deber3', component: Deber3Component },
   { path: 'Deber4', component: Deber4Component },
   { path: 'Deber5', component: Deber5Component },
+
 
 
   { path: 'CASA', component: CASAComponent },
